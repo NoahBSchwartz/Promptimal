@@ -1,21 +1,28 @@
 # Promptimal
 
 ## 🗒️ Introduction
-  
+  Achieved human-level prompt writing via self-play (automated trial and error). 
+  First to combine the OPRO and Promptbreeder papers with fine-tuning, diverging from reliance on a base model.
+## Justification
+
 ## 🛠 Process
 
-  1. First, a dataset of 2000 complex prompts (HumanEval) was fed into the gpt-3.5-turbo model.
-  2. The model was asked to generate an improved the prompt based on 
-  3. Developed an automatic prompt engineer by fine-tuning a large language model (Llama2 7b) in Pytorch.
-  4. Achieved human-level prompt writing via self-play (automated trial and error).
-  5. First to combine the OPRO and Promptbreeder papers with fine-tuning, diverging from reliance on a base model.
+  1. First, several datasets (MMLU, Alpaca, and HumanEval) were used to test the gpt-3.5-turbo model. 
+  2. The hardest questions (~2500) were fed into the model again. It was asked to generate 2 improved prompts for each.
+  3. For variety, 1000 responses were tested based on how well they produced open-ended answers from the model, scored with reward-deberta. The rest were scored simply on how accurately they produced multiple-choice answers.
+  4. The set of scores, prompts, and answers were all fed back into gpt-3.5-turbo for 3 more rounds of incremental improvements.
+  5. This final set of prompts was used to fine-tune a large language model (Llama2 7b) in Pytorch.
 
-![1_DeWuXiLcjn39xo0c6fvsXg](https://github.com/NoahBSchwartz/Promptimal/assets/44248582/3d4059e7-edbc-450c-83ea-53550d1a1396)
+
+<img width="806" alt="Screenshot 2023-11-26 at 6 53 37 PM" src="https://github.com/NoahBSchwartz/Promptimal/assets/44248582/02414aa4-4e85-4ff5-9419-f21711e78478">
+
 
 
 ## 🎉 Result
+The process achieved human-level prompt writing in greater than 90% of the generations. The project showed that it was possible to use a fine-tuned model with as few as 7 billion parameters. The traditional OPRO and Prompt Breeder methods rely on far larger models with far more generation steps. This improved method is therefore more scalable and cost-effective.
 
 ## How to Use
 
-View the colab notebook here: 
+To run inference on the final model, use [this](https://colab.research.google.com/drive/1HaIEY3PV6FnfnBAJ78L1COHrou5VrXWi#scrollTo=6F_QcoT5WOXH) google colab notebook.
+To train the model on modified data, use [this](https://colab.research.google.com/drive/1B0OvnZrb7vGcmhmKFYEaY08ZuWuGFfs8) one. 
 
