@@ -7,9 +7,9 @@
 
 ## 🛠 Process
 
-  1. First, several datasets (MMLU, Alpaca, and HumanEval) were used to test the gpt-3.5-turbo model. 
-  2. The hardest questions (~2500) were fed into the model again. It was asked to generate 2 improved prompts for each.
-  3. For variety, 1000 responses were tested based on how well they produced open-ended answers from the model, scored with reward-deberta. The rest were scored simply on how accurately they produced multiple-choice answers.
+  1. First, several datasets (MMLU, Alpaca, and HumanEval) were used to test the gpt-3.5-turbo model in order to find the hardest questions. 
+  2. These complex prompts (~2500) were fed into the model again. It was asked to generate 2 improved versions of each one.
+  3. For variety, 1000 of the prompt improvements were tested based on how well they produced open-ended answers from the model, scored with reward-deberta. The rest were scored simply on how accurately they produced multiple-choice answers.
   4. The set of scores, prompts, and answers were all fed back into gpt-3.5-turbo for 3 more rounds of incremental improvements.
   5. This final set of prompts was used to fine-tune a large language model (Llama2 7b) in Pytorch.
 
