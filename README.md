@@ -19,7 +19,10 @@
 
 
 ## 🎉 Result
-The process achieved human-level prompt writing in greater than 90% of the generations. The project showed that it was possible to use a fine-tuned model with as few as 7 billion parameters. While the traditional OPRO and Prompt Breeder methods rely on far larger models with far more generation steps, this improved method is more scalable and cost-effective.
+The process achieved human-level prompt writing in greater than 90% of the generations. The project showed that it was possible to use a fine-tuned model with as few as 7 billion parameters. While the traditional OPRO and Prompt Breeder methods rely on far larger models with far more generation steps, this improved method is more scalable and cost-effective. 
+
+
+View the full dataset [here](Promptimal/dataset/final_results.csv)
 
 ## How to Use
 
