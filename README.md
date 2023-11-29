@@ -1,8 +1,10 @@
 # Promptimal
 
 ## 🗒️ Introduction
+  Language models like chatgpt give different answers based on how users prompt them. This has led many people to begin looking into "prompt engineering" in order to get better outputs. 
+  
   Achieved human-level prompt writing via self-play (automated trial and error). 
-  First to combine the OPRO and Promptbreeder papers with fine-tuning, diverging from reliance on a base model.
+  This method is the first to combine the OPRO and Promptbreeder papers with fine-tuning, diverging from reliance on a base model.
 ## 🔍 Overview
 
 ## 🛠 Process
