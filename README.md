@@ -4,7 +4,7 @@
   Language models like ChatGPT give better or worse answers based on how users prompt them. This has led to an explosion in "prompt engineering": trying to find the best possible question to ask chatbots. But what if that too could be automated?
   
 ## 🔍 Overview
-The OPRO and Prompt-Breeder papers provided a great starting point for using language models to optimize prompts. The issue is that each one of them uses GPT-4 and over 20 generations to get a single prompt right. To keep inference costs low, my solution was to generate the best set of 1000 prompts I could and then finetune a much smaller model with it.
+The OPRO and Prompt-Breeder papers provided a great starting point for using language models to optimize prompts. The issue is that each one of them uses GPT-4 and over 20 generations to get a single prompt right. To keep inference costs low, my solution was to generate the best set of 2500 prompts I could and then finetune a much smaller model with it.
   
 ## 🛠 Process
 
