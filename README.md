@@ -1,12 +1,11 @@
 # Promptimal
 
 ## 🗒️ Introduction
-  Language models like ChatGPT give better or worse answers based on how users prompt them. This has led to an explosion of "prompt engineering" 
+  Language models like ChatGPT give better or worse answers based on how users prompt them. This has led to an explosion in "prompt engineering": trying to find the best possible question to ask chatbots. But what if that too could be automated?
   
-  Achieved human-level prompt writing via self-play (automated trial and error). 
-  This method is the first to combine the OPRO and Promptbreeder papers with fine-tuning, diverging from reliance on a base model.
 ## 🔍 Overview
-
+The OPRO and Prompt-Breeder papers provided a great starting point for using language models to optimize prompts. The issue is that each one of them uses GPT-4 and over 20 generations to get a single prompt right. To keep inference costs low, my solution was to generate the best set of 1000 prompts I could and then finetune a much smaller model with it.
+  
 ## 🛠 Process
 
   1. First, several datasets (MMLU, Alpaca, and HumanEval) were used to test the gpt-3.5-turbo model in order to find the hardest questions. 
