@@ -1,7 +1,7 @@
 # Promptimal
 
 ## 🗒️ Introduction
-  Language models like ChatGPT give better or worse answers based on how users prompt them. This has led many people to begin looking into "prompt engineering" in order to get better outputs. 
+  Language models like ChatGPT give better or worse answers based on how users prompt them. This has led to an explosion of "prompt engineering" 
   
   Achieved human-level prompt writing via self-play (automated trial and error). 
   This method is the first to combine the OPRO and Promptbreeder papers with fine-tuning, diverging from reliance on a base model.
